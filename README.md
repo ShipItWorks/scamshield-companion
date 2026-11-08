@@ -27,6 +27,7 @@ Every number on the product page names the file it came from. The lists below ar
 
 - 2026-11-07: The PausePay STOP screen now has a step to report fraud at ReportFraud.ftc.gov (with a unit test).
 - 2026-11-07: Privacy and network claims are scoped to what the code shows, and the README lists what the app does not do. Recorded checks: the built Android debug app declares CAMERA and no INTERNET or SMS permission (not a release build, not run on a device), and a scripted walk through all four tabs including text recognition requested nothing from any host except the app's own origin (web build, one headless Chrome run). Release v0.2.1.
+- 2026-11-07: The note under the video now says the narration line "nothing leaves the device" is not verified: no network capture of the Android app has run and offline use is untested. The video is not re-recorded yet.
 
 Full list with release tags: [CHANGELOG](CHANGELOG.md).
 
