@@ -2,7 +2,7 @@
 
 Offline-first scam-safety app built around Prevent, Protect, Recover; built so analysis runs on the device (offline use not yet tested).
 
-**Score: 65 / 100** on our own [rubric](https://shipitworks.com/how-we-score/). Stage: Beta. Scored 2026-11-08; this record was updated 2026-11-08 from the [product page](https://shipitworks.com/apps/#scamshield-companion).
+**Score: 65 / 100** on our own [rubric](https://shipitworks.com/how-we-score/). Stage: Beta. Scored 2026-11-10; this record was updated 2026-11-10 from the [product page](https://shipitworks.com/apps/#scamshield-companion).
 
 Every number on the product page names the file it came from. The lists below are copied from that page, not rewritten.
 
@@ -21,22 +21,22 @@ Every number on the product page names the file it came from. The lists below ar
 
 - Inspect: camera/photo QR scanner UI (Not tested yet)
 - No signed release .aab; a debug APK was built once (permissions dump only) and no release build has run
-- The QR scanner and the Android share sheet were not run; text recognition (OCR) ran once on one synthetic screenshot and its auto-found boxes were not checked; the redacted-PNG check covers one hand-drawn box in the web build; the money playbook is unit-tested only, its UI not run
+- The QR scanner ran only in the web build against Chrome's fake capture device and one synthetic QR image (no real camera, no real photos, no Android permission prompt); the Android share sheet was not run; text recognition (OCR) auto-found boxes were not checked; the redacted-PNG check covers one hand-drawn box in the web build; the money playbook is unit-tested only, its UI not run
 - Play listing copy, screenshots and the data-safety form are still missing
 - No dark mode; contrast, keyboard and TalkBack not checked; comfort text was measured only at an emulated 320px width, not on a phone
 - Offline was run once in the web build with Chrome's emulated offline mode (four tabs and one message analysis); offline OCR, airplane mode on a device and the Android app were not run
 - No network capture of the Android app on a device: "nothing leaves the device" is not yet traced (web build walk and debug-APK manifest only)
 - The PausePay and Phish or Legit advice, card labels and the Massachusetts crypto-kiosk figure on the STOP screen have no expert review or source check on main; money-playbook step wording not checked against FTC or issuer pages
-- Privacy policy contact is still the placeholder [YOUR CONTACT EMAIL] (PRIVACY_POLICY.md:71)
+- Privacy policy contact: the placeholder [YOUR CONTACT EMAIL] of ff87049 (2026-11-08) is replaced by support@shipitworks.com in abd35d3 (PRIVACY_POLICY.md:71); whether that mailbox receives mail was not checked
 
 ## What changed
 
+- 2026-11-10: Land PR #28 merged into main as abd35d3 (10 lane PRs included); no feature label changed this round. Tagged v0.3.0 at abd35d3.
 - 2026-11-08: Release v0.2.3. The money playbook in First Aid now asks how you paid (card, bank transfer, payment app, gift card, crypto, cash) and shows only the matching steps; unit tests only, UI not run, step wording not checked against FTC or issuer pages (PR 20).
 - 2026-11-08: Two more recorded web-build runs: the built app reloads and opens all four tabs with the network off after one visit, message analysis included (OCR offline not covered; emulated offline, not a device) (PR 12); the Phish or Legit deck was played through by button and swipe, progress kept across a reload (PR 25). Neither log states an exit code, so these rows stay Tested with sample data.
 - 2026-11-08: Release v0.2.2. Four proof logs were added on main and the README lines scoped to the web build: the saved redacted PNG (black box changed exactly the dragged area, nothing outside it, no metadata chunks; one box, one image), the A/A+ comfort text (16px to 20px, no sideways scroll at 320px, 48px buttons, kept after reload) and the PausePay answer paths and STOP screen. None of the logs states an exit code, so these rows are Tested with sample data, not Proven (PRs 18, 21, 22).
 - 2026-11-08: A test now pins the README counts (16 message rules, 4 PausePay questions); vitest 311 passed in the log (PR 16).
 - 2026-11-08: The share_target manifest now declares enctype; the Chrome manifest warning went from 1 to 0 and the GET share text still reaches Inspect in the web build. The Android share sheet was not run (PR 27).
-- 2026-11-08: CI now runs on the self-hosted runner; the latest run result is not verified (PR 26).
 
 See [CHANGELOG](CHANGELOG.md).
 

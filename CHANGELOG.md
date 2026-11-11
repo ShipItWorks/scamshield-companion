@@ -2,6 +2,12 @@
 
 Public record of changes to scamshield-companion, written from the product page on shipitworks.com. The source is private. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Release tags exist on the private repository's default branch.
 
+## 2026-11-10 (release v0.3.0)
+
+- 2026-11-10: Land PR #28 merged into main as abd35d3 (10 lane PRs included); no feature label changed this round. Tagged v0.3.0 at abd35d3.
+
+Score 65 / 100 on our own rubric, scored 2026-11-10. Product page: https://shipitworks.com/apps/#scamshield-companion
+
 ## 2026-11-08 (release v0.2.3)
 
 - 2026-11-08: Release v0.2.3. The money playbook in First Aid now asks how you paid (card, bank transfer, payment app, gift card, crypto, cash) and shows only the matching steps; unit tests only, UI not run, step wording not checked against FTC or issuer pages (PR 20).
