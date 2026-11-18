@@ -2,6 +2,12 @@
 
 Public record of changes to scamshield-companion, written from the product page on shipitworks.com. The source is private. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Release tags exist on the private repository's default branch.
 
+## 2026-11-18 (release v0.3.0)
+
+- 2026-11-18: A review of the Android debug build at commit 58e4a74 found that OCR auto-cover (Auto-Find) did not finish, so it was taken out of the Redact line under Works today and added to Not finished. No feature label or score changed.
+
+Score 65 / 100 on our own rubric, scored 2026-11-12. Product page: https://shipitworks.com/scamshield-companion/
+
 ## 2026-11-10 (release v0.3.0)
 
 - 2026-11-10: Land PR #28 merged into main as abd35d3 (10 lane PRs included); no feature label changed this round. Tagged v0.3.0 at abd35d3.
